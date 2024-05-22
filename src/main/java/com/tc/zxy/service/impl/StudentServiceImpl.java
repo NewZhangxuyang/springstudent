@@ -1,10 +1,14 @@
 package com.tc.zxy.service.impl;
 
+import com.querydsl.core.types.Projections;
+import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.tc.zxy.common.exception.StudentNotFoundException;
 import com.tc.zxy.dao.StudentDao;
 import com.tc.zxy.pojo.entity.Student;
+import com.tc.zxy.pojo.entity.SysRole;
 import com.tc.zxy.service.StudentService;
 import jakarta.annotation.Resource;
+import org.springframework.expression.spel.ast.Projection;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

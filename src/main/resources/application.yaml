@@ -12,6 +12,16 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
     database: mysql
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: com_tc_zxy
+        group: dev
+      config:
+        enabled: false
+  application:
+    name: SpringStudentService
 server:
   port: 8080
   servlet:
