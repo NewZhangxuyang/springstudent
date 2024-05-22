@@ -4,39 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2588d598-3736-4a9c-bf84-6491d668c182" name="更改" comment="SpringStudent 项目基本搭建">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/controller/OpenFeignController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/dao/MenuDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/dao/RoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/SysMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/SysRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/SysRoleMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/SysUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/SysUserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/compositePK/SysRoleMenuPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/compositePK/SysUserRolePK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/MenuVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/RoleVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/UserVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tc/zxy/SpringStudentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="2588d598-3736-4a9c-bf84-6491d668c182" name="更改" comment="SpringStudent 二阶段测试">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/MenuVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/MenuVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/UserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/UserVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tc/zxy/SpringStudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tc/zxy/SpringStudentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +54,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/Documents/WeChat Files/wxid_78koug5jdcg322/FileStorage/File/2024-05/check.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/Documents/WeChat Files/wxid_78koug5jdcg322/FileStorage/File/2024-05/check.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../check.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http" environment="test" />
@@ -104,8 +85,10 @@
   "keyToString": {
     "HTTP 请求.generated-requests | #25.executor": "Run",
     "HTTP 请求.generated-requests | #28.executor": "Run",
+    "JUnit.SpringStudentTest.testMenuChildren.executor": "Debug",
+    "JUnit.SpringStudentTest.testParentMenu.executor": "Run",
     "JUnit.SpringStudentTest.testRoles.executor": "Run",
-    "JUnit.SpringStudentTest.testUsers.executor": "Run",
+    "JUnit.SpringStudentTest.testUsers.executor": "Debug",
     "Maven.SpringStudent [clean].executor": "Run",
     "Python.check.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -124,14 +107,14 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "D:/javaproject/SpringStudent/src/main/java/com/tc/zxy/Main.java",
-    "project.structure.last.edited": "问题",
+    "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SpringStudentTest.testRoles">
-    <configuration name="SpringStudentTest.testRoles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.check">
+    <configuration name="SpringStudentTest.testMenuChildren" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpringStudent" />
       <extension name="coverage">
         <pattern>
@@ -141,7 +124,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.tc.zxy" />
       <option name="MAIN_CLASS_NAME" value="com.tc.zxy.SpringStudentTest" />
-      <option name="METHOD_NAME" value="testRoles" />
+      <option name="METHOD_NAME" value="testMenuChildren" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringStudentTest.testParentMenu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringStudent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tc.zxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tc.zxy" />
+      <option name="MAIN_CLASS_NAME" value="com.tc.zxy.SpringStudentTest" />
+      <option name="METHOD_NAME" value="testParentMenu" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,29 +162,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="check (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SpringStudent" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../toolsoft/pythonproject" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../toolsoft/pythonproject/check.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="check" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SpringStudent" />
       <option name="ENV_FILES" value="" />
@@ -196,12 +172,12 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.12 (untitled)" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/WeChat Files/wxid_78koug5jdcg322/FileStorage/File/2024-05" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/WeChat Files/wxid_78koug5jdcg322/FileStorage/File/2024-05/check.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../check.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -225,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpringStudentTest.testRoles" />
-        <item itemvalue="JUnit.SpringStudentTest.testUsers" />
         <item itemvalue="Spring Boot.SpringStuApplication" />
-        <item itemvalue="Python.check (1)" />
         <item itemvalue="Python.check" />
+        <item itemvalue="JUnit.SpringStudentTest.testUsers" />
+        <item itemvalue="JUnit.SpringStudentTest.testMenuChildren" />
+        <item itemvalue="JUnit.SpringStudentTest.testParentMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +240,7 @@
       <workItem from="1716210784751" duration="7990000" />
       <workItem from="1716288444722" duration="9688000" />
       <workItem from="1716340985215" duration="32000" />
-      <workItem from="1716342137481" duration="19059000" />
+      <workItem from="1716342137481" duration="41789000" />
     </task>
     <task id="LOCAL-00001" summary="SpringStudent 项目基本搭建">
       <option name="closed" value="true" />
@@ -274,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715562035742</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SpringStudent 二阶段测试">
+      <option name="closed" value="true" />
+      <created>1716377481724</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716377481724</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,9 +289,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="SpringStudent 项目基本搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="SpringStudent 项目基本搭建" />
+    <MESSAGE value="SpringStudent 二阶段测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="SpringStudent 二阶段测试" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SpringStudent$check.coverage" NAME="check 覆盖结果" MODIFIED="1715520543341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documents/WeChat Files/wxid_78koug5jdcg322/FileStorage/File/2024-05" />
+    <SUITE FILE_PATH="coverage/SpringStudent$check.coverage" NAME="check 覆盖结果" MODIFIED="1716399754411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/SpringStudent$SpringStudentTest_testUsers.ic" NAME="SpringStudentTest.testUsers 覆盖结果" MODIFIED="1716384228354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.tc.zxy.*</FILTER>
+    </SUITE>
   </component>
 </project>

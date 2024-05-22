@@ -14,7 +14,7 @@ public class UserVO implements java.io.Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private Integer userId;
+    private Integer user_id;
     private String userName;
     private List<RoleVO> roles;
     private List<MenuVO> menus;

@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface UserService {
     List<RoleVO> listRolesByUserId(Integer userId);
+    UserVO selectUserDetailById(Integer userId);
 }

@@ -6,6 +6,7 @@ import com.tc.zxy.pojo.vo.RoleVO;
 import java.util.List;
 
 public interface RoleService {
-    List<MenuVO> listMenusByRoleIds(List<Integer> roleIds);
+    List<MenuVO> listMenusByRoleIds(List<Integer>  roleIds);
+    public List<MenuVO> setMenuChildren(List<MenuVO> menus);
 
 }
