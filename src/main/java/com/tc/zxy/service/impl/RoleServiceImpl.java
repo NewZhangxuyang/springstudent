@@ -32,12 +32,37 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public List<MenuVO> listMenusByRoleIds(List<Integer> roleIds) {
-        return jpa.select(Projections.bean(MenuVO.class, menu.id.as("menuId"), menu.name.as("menuName"), menu.code.as("code"), menu.type.as("type"), menu.pid.as("parentId"))).from(role).where(role.id.in(roleIds).and(menu.type.isNotNull())).leftJoin(roleMenu).on(role.id.eq(roleMenu.roleId)).leftJoin(menu).on(roleMenu.menuId.eq(menu.id)).distinct().fetch();
+        return jpa.select(
+                        Projections.bean(MenuVO.class,
+                                menu.id.as("menuId"),
+                                menu.name.as("menuName"),
+                                menu.code.as("code"),
+                                menu.type.as("type"),
+                                menu.pid.as("parentId")))
+                .from(role).where(role.id.in(roleIds)
+                        .and(menu.type.isNotNull()))
+                .leftJoin(roleMenu)
+                .on(role.id.eq(roleMenu.roleId))
+                .leftJoin(menu).on(roleMenu.menuId.eq(menu.id)).distinct().fetch();
 
     }
 
+
+    /**
+     * 以当前权限组中的根节点为基准，递归构造权限树
+     * 流式构造
+     *
+     * @return List<MenuVO>
+     */
     public List<MenuVO> setMenuChildren(List<MenuVO> menus) {
         List<Integer> childrenIds = new ArrayList<>();
+        List<Integer> allMemuIds = menus.stream().map(MenuVO::getMenuId).toList();
+        /*当前Menu中的顶层节点*/
+        List<MenuVO> rootMenuTree = menus.stream().filter(
+                        menuVO -> !allMemuIds.contains(menuVO.getParentId()))
+                .peek(parentMenu -> recursionChildrenTree(parentMenu, menus)
+                ).toList();
+
         List<MenuVO> primalMenus = menus.stream().peek(menuVO -> menuVO.setChildren(menus.stream().filter(childrenVO -> {
             if (childrenVO.getParentId() != null && childrenVO.getParentId().equals(menuVO.getMenuId())) {
                 childrenIds.add(childrenVO.getMenuId());
@@ -47,5 +72,28 @@ public class RoleServiceImpl implements RoleService {
             }
         }).toList())).toList();
         return primalMenus.stream().filter(menuVO -> !childrenIds.contains(menuVO.getMenuId())).toList();
+    }
+
+
+    /**
+     * 支持深层权限树
+     * 递归构造
+     *
+     * @param
+     * @param allMenus
+     * @return List<MenuVO>
+     */
+    private void recursionChildrenTree(MenuVO root, List<MenuVO> allMenus) {
+        allMenus.forEach(menuVO -> {
+            if (menuVO.getParentId().equals(root.getMenuId())) {
+                recursionChildrenTree(menuVO, allMenus);
+                List<MenuVO> children = new ArrayList<>();
+                if (root.getChildren() != null) {
+                    children = root.getChildren();
+                }
+                children.add(menuVO);
+                root.setChildren(children);
+            }
+        });
     }
 }

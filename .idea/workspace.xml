@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2588d598-3736-4a9c-bf84-6491d668c182" name="更改" comment="SpringStudent 二阶段测试">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/controller/UserController.java" afterDir="false" />
+    <list default="true" id="2588d598-3736-4a9c-bf84-6491d668c182" name="更改" comment="SpringStudent 二阶段测试功能完善">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/MenuVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/MenuVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/UserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/UserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/MenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/RoleVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/pojo/vo/RoleVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tc/zxy/SpringStudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tc/zxy/SpringStudentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +104,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.check">
+  <component name="RunManager" selected="JUnit.SpringStudentTest.testMenuChildren">
     <configuration name="SpringStudentTest.testMenuChildren" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpringStudent" />
       <extension name="coverage">
@@ -201,10 +192,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpringStudentTest.testMenuChildren" />
         <item itemvalue="Spring Boot.SpringStuApplication" />
         <item itemvalue="Python.check" />
         <item itemvalue="JUnit.SpringStudentTest.testUsers" />
-        <item itemvalue="JUnit.SpringStudentTest.testMenuChildren" />
         <item itemvalue="JUnit.SpringStudentTest.testParentMenu" />
       </list>
     </recent_temporary>
@@ -240,7 +231,7 @@
       <workItem from="1716210784751" duration="7990000" />
       <workItem from="1716288444722" duration="9688000" />
       <workItem from="1716340985215" duration="32000" />
-      <workItem from="1716342137481" duration="41789000" />
+      <workItem from="1716342137481" duration="57563000" />
     </task>
     <task id="LOCAL-00001" summary="SpringStudent 项目基本搭建">
       <option name="closed" value="true" />
@@ -258,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716377481724</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SpringStudent 二阶段测试功能完善">
+      <option name="closed" value="true" />
+      <created>1716400707261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716400707261</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +289,27 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="SpringStudent 项目基本搭建" />
     <MESSAGE value="SpringStudent 二阶段测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="SpringStudent 二阶段测试" />
+    <MESSAGE value="SpringStudent 二阶段测试功能完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="SpringStudent 二阶段测试功能完善" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/RoleServiceImpl.java</url>
+          <line>65</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tc/zxy/service/impl/RoleServiceImpl.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SpringStudent$check.coverage" NAME="check 覆盖结果" MODIFIED="1716399754411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
