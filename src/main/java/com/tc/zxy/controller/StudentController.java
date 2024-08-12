@@ -15,6 +15,9 @@ import java.util.List;
 @RequestMapping("/api/students")
 public class StudentController {
 
+    /**
+     * 测试邮箱
+     */
     @Resource
     private StudentService studentService;
 
