@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" debug="false">
+    <!-- 从Spring配置中读取应⽤名作为环境变量 -->
+    <springProperty scope="context" name="spring.application.name"
+                    source="spring.application.name" defaultValue=""/>
+    <!-- 设置⽇志基础路径 -->
+    <property name="PATH" value="logs"/>
+    <!-- 应⽤名称作为⽇志⽂件的基础名 -->
+    <property name="FILE_NAME" value="${spring.application.name}"/>
+    <!-- 控制台⽇志输出 -->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout
+                    class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
+                <!-- ⾃定义⽇志格式 -->
+                <Pattern>
+                    %red(%d{ISO8601}) [%tid] %highlight(${LOG_LEVEL_PATTERN:-%5p}) [%blue(%t)] %green(%C{1}): %msg%n%throwable</Pattern>
+            </layout>
+        </encoder>
+    </appender>
+    <!-- 追踪⽇志⽂件输出，按⽇期滚动 -->
+    <appender name="TRACE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/${FILE_NAME}_trace.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${PATH}/${FILE_NAME}_trace.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <!-- ⽇志格式 -->
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %highlight([%-5level]) %green([%15.15thread]) %cyan([%logger:%line])--%mdc{client} %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- 错误⽇志⽂件输出，仅记录ERROR及以上级别 -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/${FILE_NAME}_error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${PATH}/${FILE_NAME}_error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %highlight([%-5level]) %green([%15.15thread]) %cyan([%logger:%line])--%mdc{client} %msg%n
+            </pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+    <!-- GRPC⽇志客户端Appender -->
+    <appender name="grpc-log"
+              class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.log.GRPCLogClientAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout
+                    class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.mdc.TraceIdMDCPatternLogbackLayout">
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{tid}] [%thread] %-5level %logger{36} - %msg%n
+                </Pattern>
+            </layout>
+        </encoder>
+    </appender>
+    <!-- 根⽇志级别配置，关联所有Appender -->
+    <root level="info">
+        <appender-ref ref="Console" />
+        <appender-ref ref="TRACE_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+        <appender-ref ref="grpc-log"/>
+    </root>
+</configuration>

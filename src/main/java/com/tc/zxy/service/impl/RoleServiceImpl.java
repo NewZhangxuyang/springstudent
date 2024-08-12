@@ -44,44 +44,26 @@ public class RoleServiceImpl implements RoleService {
                 .leftJoin(roleMenu)
                 .on(role.id.eq(roleMenu.roleId))
                 .leftJoin(menu).on(roleMenu.menuId.eq(menu.id)).distinct().fetch();
-
     }
 
 
     /**
      * 以当前权限组中的根节点为基准，递归构造权限树
+     * 根节点：当前用户权限中的顶层节点
      * 流式构造
-     *
      * @return List<MenuVO>
      */
     public List<MenuVO> setMenuChildren(List<MenuVO> menus) {
-        List<Integer> childrenIds = new ArrayList<>();
         List<Integer> allMemuIds = menus.stream().map(MenuVO::getMenuId).toList();
         /*当前Menu中的顶层节点*/
-        List<MenuVO> rootMenuTree = menus.stream().filter(
-                        menuVO -> !allMemuIds.contains(menuVO.getParentId()))
-                .peek(parentMenu -> recursionChildrenTree(parentMenu, menus)
-                ).toList();
-
-        List<MenuVO> primalMenus = menus.stream().peek(menuVO -> menuVO.setChildren(menus.stream().filter(childrenVO -> {
-            if (childrenVO.getParentId() != null && childrenVO.getParentId().equals(menuVO.getMenuId())) {
-                childrenIds.add(childrenVO.getMenuId());
-                return true;
-            } else {
-                return false;
-            }
-        }).toList())).toList();
-        return primalMenus.stream().filter(menuVO -> !childrenIds.contains(menuVO.getMenuId())).toList();
+        return  menus.stream().filter(menuVO -> !allMemuIds.contains(menuVO.getParentId()))
+                .peek(parentMenu -> recursionChildrenTree(parentMenu, menus))
+                .toList();
     }
 
 
     /**
-     * 支持深层权限树
-     * 递归构造
-     *
-     * @param
-     * @param allMenus
-     * @return List<MenuVO>
+     * 递归构造权限树
      */
     private void recursionChildrenTree(MenuVO root, List<MenuVO> allMenus) {
         allMenus.forEach(menuVO -> {
@@ -94,6 +76,6 @@ public class RoleServiceImpl implements RoleService {
                 children.add(menuVO);
                 root.setChildren(children);
             }
-        });
+      });
     }
 }
